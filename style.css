@@ -1,0 +1,634 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 圖片自適應延伸 */
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* 全域 border box */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+h2 {
+	font-size: 32px;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+p {
+	font-size: 20px;
+	line-height: 30px;
+}
+
+@media (max-width:767px) {
+	h2 {
+		font-size: 24px;
+		font-weight: 700;
+	}
+
+	h3 {
+		font-size: 20px;
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 24px;
+		font-weight: 400;
+	}
+}
+
+/* 主體 CSS 共用區 */
+.container {
+	display: flex;
+	max-width: 1296px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.text-gray {
+	color: #919191;
+}
+
+.text-white {
+	color: white;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.all-title {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+.all-title h2 {
+	padding: 15px 20px;
+}
+
+.all-title .line {
+	width: 100px;
+	height: 1px;
+	background-color: #c1c1c1;
+	margin-top: 28px;
+}
+
+.bg-white {
+	background: white;
+}
+
+/* PC - 1200px
+  iPad - 992px
+  iPad以下 - 767px
+  iPhone 6 Plus - 414px (視專案族群)
+  iPhone 6 - 375px (視專案族群)
+  iPhone 5、SE - 320px */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	outline: 1px solid;
+}
+
+.wrap {
+	font-family: Noto Sans, sans-serif;
+	max-width: 1920px;
+}
+
+/* header */
+
+.header {
+	position: relative;
+	z-index: 1;
+}
+
+.header img {
+	position: absolute;
+	z-index: 2;
+	top: 20%;
+	left: 16%;
+	width: 90px;
+	height: 40px;
+}
+
+.header-menu {
+	width: 480px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+
+.header-menu li {
+	text-align: center;
+}
+
+.header-menu a {
+	display: block;
+	padding: 4px 8px 4px 8px;
+	margin-top: 32px;
+	margin-bottom: 32px;
+	font-size: 16px;
+	font-weight: 400;
+	border: 1px solid #919191;
+	text-decoration: none;
+}
+
+.header-menu a:hover {
+	background: black;
+	color: white;
+}
+
+@media (max-width:992px) {
+	.header-menu {
+		display: flex;
+		justify-content: space-between;
+		width: 330px;
+	}
+
+}
+
+@media (max-width:767px) {
+	.header img {
+		top: 10%;
+		left: 44%;
+	}
+
+	.header-menu {
+		padding-top: 50px;
+		width: 100px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.header-menu a {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
+/* title */
+
+.title {
+	padding: 80px;
+	text-align: center;
+}
+
+.title-quote {
+	padding-top: 59px;
+	padding-bottom: 59px;
+	margin: 0 auto;
+	width: 670px;
+	position: relative;
+	z-index: 1;
+}
+
+.quote-top {
+	position: absolute;
+	z-index: 2;
+	top: 0px;
+	left: 0px;
+}
+
+.quote-bottom {
+	position: absolute;
+	z-index: 2;
+	top: 120px;
+	right: 0px;
+}
+
+.title-quote p {
+	font-size: 24px;
+	line-height: 1.5;
+}
+
+@media (max-width:992px) {
+	.title {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+}
+
+@media (max-width:767px) {
+	.title {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.title-quote{
+		width: 100%;
+	}
+}
+
+.title-info {
+	display: flex;
+	width: 636px;
+	gap: 40px;
+	margin: 0 auto;
+}
+
+.title-info h3 {
+	margin-bottom: 8px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.title-info p {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.5;
+	text-align: center;
+}
+
+
+@media (max-width:992px) {
+	.title-info {
+		flex-direction: column;
+	}
+
+}
+
+@media (max-width:767px) {
+	.title-info {
+		padding: 20px;
+		gap: 20px;
+		width: 100%;
+
+	}
+}
+
+
+.content {
+	padding-top: 120px;
+	padding-bottom: 120px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.container {
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.card {
+	width: 636px;
+	margin-bottom: 80px;
+}
+
+.card-img {
+	width: 636px;
+	border-radius: 8px;
+	border: 1px 0px 0px 0px #f1f1f1;
+	margin-bottom: 16px;
+}
+
+.card-img img {
+	border-radius: 8px;
+}
+
+.card-body {
+	width: fill;
+	height: 122px;
+	padding: 0px 16px 0px 16px;
+	gap: 24px;
+	border: 0px 0px 1px 0px;
+	opacity: 0px;
+}
+
+.card-data {
+	margin-bottom: 24px;
+}
+
+.card-data h2 {
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 1.2;
+	text-align: left;
+	color: #3B3B3B;
+
+	margin-bottom: 8px;
+}
+
+.card-data p {
+	line-height: 1.5;
+	text-align: left;
+	color: #919191;
+}
+
+.tagblock {
+	display: flex;
+}
+
+.tag {
+	padding: 4px 12px 4px 12px;
+	border-radius: 16px;
+	font-family: Noto Sans;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: left;
+	color: #3B3B3B;
+	background: #F1F1F1;
+	margin-right: 16px;
+}
+
+
+@media (max-width:992px) {
+	.container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+}
+
+@media (max-width:767px) {
+	.container{
+		width: 100%;
+	}
+	.card{
+		width: 100%;
+	}
+	.card-img{
+		width: 100%;
+	}
+
+}
+
+.inator {
+	margin: 0 auto;
+}
+
+.inator-item {
+	margin-top: 72px;
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+}
+
+.inator-item a {
+	color: #000;
+	width: 40px;
+	height: 40px;
+	padding: 2px 13px 2px 13px;
+	border-radius: 4px 0px 0px 0px;
+}
+
+.inator-item a:hover {
+	background: #1E1E1E;
+	color: white;
+}
+
+
+
+
+/* 表尾 */
+
+.footer-ig {
+	background-image: url("https://06irene.github.io/HTMLCSSWIN/img/footer-bg-lg.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.footer-ig .content {
+	display: flex;
+	padding: 50px 0;
+	justify-content: space-between;
+}
+
+.footer-left {
+	width: 30%;
+	align-content: center;
+}
+
+.footer-left img {
+	width: 120px;
+	height: 54px;
+}
+
+.footer-left p {
+	padding: 20px 0;
+}
+
+.footer-right {
+	width: 30%;
+	align-content: center;
+}
+
+.footer-btn {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: left;
+}
+
+.footer-btn li {
+
+	margin-bottom: 14px;
+	margin: auto;
+}
+
+.footer-btn li a {
+	display: block;
+	background: #fff;
+	color: #3B3B3B;
+	width: 306px;
+	height: 72px;
+	border-radius: 8px;
+	padding: 8px 24px;
+	border: 1px solid #c1c1c1;
+	text-decoration: none;
+	font-size: 25px;
+	align-content: center;
+}
+
+.footer-btn li a:hover {
+	background: black;
+	color: #fff;
+}
+
+@media (max-width:992px) {
+	.footer-ig {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+}
+
+@media (max-width:767px) {
+	.footer-ig  {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.footer-left {
+		width: 100%;
+		align-content: center;
+		text-align: center;
+	}
+
+	.footer-left img {
+		width: 150px;
+	}
+
+	.footer-right {
+		width: 100%;
+		justify-content: center;
+		padding: 0 30px;
+	}
+
+	.footer-btn li a {
+		width: 100%;
+		height: 80px;
+	}
+}
