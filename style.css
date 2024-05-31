@@ -351,6 +351,7 @@ body {
 .title-inner {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	gap: 24px;
 }
 
@@ -400,7 +401,8 @@ body {
 .title-info-items {
 	display: flex;
 	gap: 40px;
-	li{
+
+	li {
 		width: 298px;
 	}
 }
@@ -442,20 +444,18 @@ body {
 .content {
 	padding-top: 120px;
 	padding-bottom: 120px;
-	text-align: center;
-	margin: 0 auto;
 }
 
-.container {
-	margin: 0 auto;
+.content-inner {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	gap: 24px;
+	justify-content: center;
 	align-items: center;
+
 }
 
 .card {
-	width: 636px;
 	margin-bottom: 80px;
 }
 
@@ -464,19 +464,13 @@ body {
 	border-radius: 8px;
 	border: 1px 0px 0px 0px #f1f1f1;
 	margin-bottom: 16px;
-}
-
-.card-img img {
 	border-radius: 8px;
 }
 
 .card-body {
 	width: fill;
-	height: 122px;
 	padding: 0px 16px 0px 16px;
-	gap: 24px;
 	border: 0px 0px 1px 0px;
-	opacity: 0px;
 }
 
 .card-data {
@@ -487,65 +481,67 @@ body {
 	font-size: 28px;
 	font-weight: 700;
 	line-height: 1.2;
-	text-align: left;
 	color: #3B3B3B;
-
 	margin-bottom: 8px;
 }
 
 .card-data p {
 	line-height: 1.5;
-	text-align: left;
 	color: #919191;
 }
 
-.tagblock {
-	display: flex;
-}
-
 .tag {
-	padding: 4px 12px 4px 12px;
-	border-radius: 16px;
-	font-family: Noto Sans;
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 24px;
-	text-align: left;
-	color: #3B3B3B;
-	background: #F1F1F1;
-	margin-right: 16px;
-}
+	display: flex;
 
+	li {
+		padding: 4px 12px 4px 12px;
+		border-radius: 16px;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.5;
+		text-align: left;
+		color: #3B3B3B;
+		background: #F1F1F1;
+		margin-right: 16px;
+	}
+}
 
 @media (max-width:992px) {
-	.container {
+	.content {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	
+	.content-inner {
 		flex-direction: column;
 		align-items: center;
-	}
 
+	}
+	.card{
+		margin-bottom: 20px;
+	}
 }
 
 @media (max-width:767px) {
-	.container {
+	.content {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	
+	.content{
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+	.content-inner {
 		width: 100%;
 	}
-
-	.card {
-		width: 100%;
-	}
-
-	.card-img {
-		width: 100%;
-	}
-
 }
 
 .inator {
-	margin: 0 auto;
+	margin-top: 72px;
 }
 
 .inator-item {
-	margin-top: 72px;
 	display: flex;
 	justify-content: center;
 	gap: 16px;
@@ -564,7 +560,17 @@ body {
 	color: white;
 }
 
+@media (max-width:992px) {
+	.inator {
+		margin-top: 36px;
+	}
+}
 
+@media (max-width:767px) {
+	.inator {
+		margin-top: 20px;
+	}
+}
 
 
 /* 表尾 */
