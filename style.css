@@ -164,6 +164,10 @@ p {
 	line-height: 30px;
 }
 
+a {
+	text-decoration: none;
+}
+
 @media (max-width:767px) {
 	h2 {
 		font-size: 24px;
@@ -361,7 +365,8 @@ p {
 		padding-left: 20px;
 		padding-right: 20px;
 	}
-	.title-quote{
+
+	.title-quote {
 		width: 100%;
 	}
 }
@@ -492,13 +497,15 @@ p {
 }
 
 @media (max-width:767px) {
-	.container{
+	.container {
 		width: 100%;
 	}
-	.card{
+
+	.card {
 		width: 100%;
 	}
-	.card-img{
+
+	.card-img {
 		width: 100%;
 	}
 
@@ -606,7 +613,7 @@ p {
 }
 
 @media (max-width:767px) {
-	.footer-ig  {
+	.footer-ig {
 		display: flex;
 		flex-direction: column;
 	}
