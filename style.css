@@ -187,44 +187,8 @@ a {
 
 /* 主體 CSS 共用區 */
 .container {
-	display: flex;
 	max-width: 1296px;
 	margin: 0 auto;
-	padding: 10px;
-}
-
-.text-gray {
-	color: #919191;
-}
-
-.text-white {
-	color: white;
-}
-
-.text-center {
-	text-align: center;
-}
-
-.all-title {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	align-content: center;
-}
-
-.all-title h2 {
-	padding: 15px 20px;
-}
-
-.all-title .line {
-	width: 100px;
-	height: 1px;
-	background-color: #c1c1c1;
-	margin-top: 28px;
-}
-
-.bg-white {
-	background: white;
 }
 
 /* PC - 1200px
@@ -267,10 +231,7 @@ body {
 	}
 }
 
-.container {
-	max-width: 1296px;
-	margin: 0 auto;
-}
+
 
 @media(max-width:1295px) {
 	.container {
@@ -382,8 +343,15 @@ body {
 /* title */
 
 .title {
-	padding: 80px;
+	padding-top: 80px;
+	padding-bottom: 80px;
 	text-align: center;
+}
+
+.title-inner {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
 }
 
 .title-quote {
@@ -405,7 +373,7 @@ body {
 .quote-bottom {
 	position: absolute;
 	z-index: 2;
-	top: 120px;
+	bottom: 0px;
 	right: 0px;
 }
 
@@ -416,28 +384,25 @@ body {
 
 @media (max-width:992px) {
 	.title {
-		padding-left: 40px;
-		padding-right: 40px;
-	}
-
-}
-
-@media (max-width:767px) {
-	.title {
+		padding-top: 40px;
+		padding-bottom: 40px;
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+}
 
+@media (max-width:767px) {
 	.title-quote {
 		width: 100%;
 	}
 }
 
-.title-info {
+.title-info-items {
 	display: flex;
-	width: 636px;
 	gap: 40px;
-	margin: 0 auto;
+	li{
+		width: 298px;
+	}
 }
 
 .title-info h3 {
@@ -456,8 +421,10 @@ body {
 
 
 @media (max-width:992px) {
-	.title-info {
+	.title-info-items {
+		display: flex;
 		flex-direction: column;
+		align-items: center;
 	}
 
 }
