@@ -462,7 +462,7 @@ a {
 	margin-bottom: 80px;
 }
 
-.card-img {
+.card-img img {
 	width: 636px;
 	border-radius: 8px;
 	border: 1px solid #f1f1f1;
@@ -495,15 +495,16 @@ a {
 
 .tag {
 	display: flex;
-
-	li {
-		padding: 4px 12px 4px 12px;
-		border-radius: 16px;
-		color: #3B3B3B;
-		background: #F1F1F1;
-		margin-right: 16px;
-	}
 }
+
+.tag li {
+	padding: 4px 12px 4px 12px;
+	border-radius: 16px;
+	color: #3B3B3B;
+	background: #F1F1F1;
+	margin-right: 16px;
+}
+
 
 @media (max-width:992px) {
 	.content {
@@ -544,6 +545,7 @@ a {
 
 	.tag {
 		flex-direction: column;
+		align-items: center;
 	}
 }
 
@@ -620,7 +622,7 @@ a {
 .footer-contact h2 {
 	margin-bottom: 24px;
 	max-width: 120px;
-	margin: 0 auto;
+
 }
 
 .footer-contact p {
@@ -646,6 +648,13 @@ a {
 		margin: 0 auto;
 		margin-bottom: 60px;
 		width: 100%;
+
+	}
+
+	.footer-contact h2 {
+
+		margin: 0 auto;
+
 	}
 
 	/* 
